@@ -1,0 +1,22 @@
+---
+- name: master 
+  box: centos/7
+  cpus: 1
+  memory: 4096
+  public_ip: 192.168.0.99
+  hostname: master.puppet
+- name: slave
+  box: centos/7
+  cpus: 1
+  memory: 4096
+  public_ip: 192.168.0.100
+  hostname: agent.puppet
+  ports: 
+  - "8080:8080"
+- name: ubuntu
+  box: ubuntu/xenial64
+  cpus: 1
+  memory: 4096
+  public_ip: 192.168.0.101
+  hostname: ubuntu.puppet
+
